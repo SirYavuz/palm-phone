@@ -1,0 +1,150 @@
+.app-kisiler {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: #0d805d;
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.inside-of-kisiler {
+    position: relative;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    height: 445px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.kisiler-top {
+    width: 100%;
+    height: 88%;
+    background: #fff;
+}
+
+.kisiler-footer {
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+}
+
+.kisiler-bottom-buttons {
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+
+.k-footer-left {
+    border-top-left-radius: 20px;
+}
+
+.k-footer-right {
+    border-top-right-radius: 20px;
+}
+
+.k-footer-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d805d;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transition: .5s ease all;
+}
+
+.k-footer-app:hover {
+    background: #074f39;
+}
+
+.k-top-add {
+    position: relative;
+    left: 15px;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+#kisiekleplus {
+    transform: rotate(45deg);
+    size: 20px;
+}
+
+.k-add-buttonn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 70%;
+    border-radius: 25px;
+    color: #fff;
+    background: #0d805d;
+    box-shadow: 0px 0px 36px 1px rgba(0, 0, 0, 0.4);
+}
+
+.k-numbers {
+    width: 100%;
+    height: 95%;
+    background: transparent;
+}
+
+.k-numbers-inside {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.k-numpad {
+    background: transparent;
+    width: 69.15%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.k-numpad .kvalue {
+    grid-column: span 3 !important;
+    height: 50px !important;
+    text-align: right !important;
+    border: none !important;
+    outline: none !important;
+    padding: 10px !important;
+    font-size: 25px !important;
+}
+
+.k-numpad span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    background-color: #074f39;
+    color: #fff;
+    transition: .5s all ease;
+}
+
+.call-with-numpad {
+    width: 195px !important;
+    height: 50px !important;
+}
+
+.k-numpad span:active {
+    background: greenyellow;
+}

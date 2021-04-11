@@ -1,0 +1,90 @@
+/* Görev */
+
+.app-duty {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: rgb(241, 241, 241);
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.app-duty-header {
+    position: relative;
+    width: 282px;
+    height: 60px;
+    top: 17px;
+    /* font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    color: white; */
+    background-color: #2369d1;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}
+
+.app-duty-header-text {
+    margin-top: 5px;
+}
+
+.baslik {
+    margin-top: 37px;
+    background-color: #2369d1;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    color: red;
+}
+
+.app-duty-header>p {
+    padding-top: 8px;
+}
+
+.app-duty-yamuk {
+    position: relative;
+    width: 282px;
+    height: 500px;
+    top: 0px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}
+
+.duty {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    margin-top: 470px;
+    margin-left: 60px;
+    border-radius: 15px;
+    width: 60%;
+    height: 32px;
+    padding-top: 6px;
+    padding-left: 35px;
+    border-bottom: 1px solid #141414;
+    background-color: #dfdfdf;
+}
+
+.app-duty-logo {
+    height: 120px;
+    margin-top: 190px;
+    margin-left: 15px;
+    background-color: #2369d1;
+    border-radius: 250px;
+}
+
+.butonumuz {
+    background-color: red;
+    width: 25px;
+    margin-left: 10px;
+    border-radius: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

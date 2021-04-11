@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PalmCell</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bankcss.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/duty.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/pcell.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/information.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/yemek.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/contacts.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/telsiz.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/store.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/phone.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/hesap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/topbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/lockscreen.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/phone-call.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+    <script>
+        var AudioPlayer = null;
+        AudioPlayer = new Howl({
+            src: ["./assets/sound/closesound.mp3"]
+        });
+        window.addEventListener('message', function(event) {
+            if (event.data.transactionType == "playSound") {
+                AudioPlayer.volume(0.55);
+                AudioPlayer.play();
+            }
+            if (event.data.transactionType == "stopSound") {
+                AudioPlayer.stop();
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="phone">
+        <div id="howIenter">
+            <button id="goUpLock">Kilidi aç</button>
+        </div>
+        <img id="setBrgh" src="./assets/img/solid/blackbg.jpg">
+        <img src="./assets/img/border/s8.png" class="phone-frame">
+        <div class="phone-screen">
+            <div class="phone-app-top-time">
+                <div><span id="current-time1"></span><span>PalmCell</span></div>
+            </div>
+            <div class="phone-top-apps">
+                <!-- <div class="app" id="contacts" style="background-color:rgb(36, 180, 31);background-image: url(./assets/img/phone-apps/contacts.png)"><span>Rehber</span></div> -->
+                <!-- <div class="app" id="comment" style="background-color:#ffaa00;background-image: url(./assets/img/phone-apps/comment.png)">
+                    <span>Mesajlar</span></div> -->
+                <div class="app" id="bank" style="background-color:#1e1e1f; background-image: url(./assets/img/phone-apps/wallet.png);">
+                    <span>Banka</span></div>
+                <div class="app" id="settings" style="background-color:#909498; background-image: url(./assets/img/phone-apps/settings.png);">
+                    <span>Ayarlar</span></div>
+                <!-- <div class="app" id="yemek" style="background-color:rgb(73, 73, 73);background-image: url(./assets/img/phone-apps/settings.png);">
+                    <span>Yemek</span></div> -->
+                <!-- <div class="app" id="twitter" style="background-color:rgb(30, 136, 223);background-image: url(./assets/img/phone-apps/twitter.png)">
+                    <span>Twitter</span></div> -->
+                <!-- <div class="app" id="insta" style="background-color:rgb(168, 31, 180);background-image: url(./assets/img/phone-apps/insta.png)">
+                    <span>İnstagram</span></div> -->
+                <div class="app" id="duty" style="background-color:rgb(223, 236, 39);background-image: url(./assets/img/phone-apps/yellow.png)">
+                    <span>Görev</span></div>
+                <div class="app" id="camera" style="background-color:rgb(73, 73, 73);background-image: url(./assets/img/phone-apps/kamera.png);">
+                    <span>Kamera</span></div>
+                <!-- <div class="app" id="ihbar" style="background-color:rgb(204, 41, 41);background-image: url(./assets/img/phone-apps/phone.png);">
+                    <span>İhbar</span></div> -->
+                <div class="app" id="calculator" style="background-color: #a5a5a6;background-image: url(./assets/img/phone-apps/calculator.png)">
+                    <span>Hesap</span></div>
+                <div class="app" id="pcell" style="background-color: #d4a523;background-image: url(./assets/img/phone-apps/palmstore.png)">
+                    <span>Palmcell</span></div>
+                <!-- <div class="app" id="saat" style="background-color:#000;background-image: url(./assets/img/phone-apps/clock.png)">
+                    <span>Saat</span></div> -->
+                <div class="app" id="store" style="background-color:rgb(119, 24, 128);background-image: url(./assets/img/phone-apps/clock.png)">
+                    <span>Store</span></div>
+                <!-- <div class="app" id="telsiz" style="background-color:#0f186b;background-image: url(./assets/img/phone-apps/phone.png);">
+                    <span>Telsiz</span></div> -->
+                <!-- <div class="app" id="clock" style="background-color:#686868;background-image: url(./assets/img/phone-apps/clock.png);"><span>Saat</span></div> -->
+            </div>
+            <div class="phone-bottom-apps">
+                <div class="app" id="phone" style="background-size:cover;background-image: url(./assets/img/phone-apps/phone.png);background-image: url(./assets/img/phone-apps/phone.png),linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);">
+                </div>
+                <div class="app" id="kisiler" style="background-size:cover;background-image: url(./assets/img/phone-apps/contacts.png);background-image: url(./assets/img/phone-apps/contacts.png),linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);">
+                </div>
+                <div class="app" id="comment" style="background-size:cover;background-image: url(./assets/img/phone-apps/comment.png);background-image: url(./assets/img/phone-apps/comment.png),linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);">
+                </div>
+                <div class="app" id="cameraac" style="background-size: 60px;background-image: url(./assets/img/phone-apps/kamera2.png);background-image: url(./assets/img/phone-apps/kamera2.png),linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);">
+                </div>
+            </div>
+        </div>
+
+        <div class="app-information">
+        </div>
+
+        <div class="phone-calling">
+            <div class="phone-answer-buttons">
+                <div id="answerYes"><i class="material-icons">phone</i></div>
+                <div id="answerNo"><i class="material-icons">phone</i></div>
+            </div>
+        </div>
+        <div class="phone-on-call">
+
+            <div class="phone-call-off-button">
+
+                <div id="callOff"><i class="material-icons">phone_missed</i></div>
+            </div>
+            <div class="yavuzun-divi">
+                <div id="aranan-numara"></div>
+            </div>
+        </div>
+
+        <div class="app-kisiler">
+            <div class="inside-of-kisiler">
+                <div class="kisiler-top">
+                    <div class="k-top-add">
+                        <div class="k-add-buttonn">
+                            <i id="kisiekleplus" class="material-icons">clear</i>Kisi ekle
+                        </div>
+                    </div>
+
+                    <div class="k-top-add-screen" style="display: none;">
+                        <button id="k-add-screen-backb">geridon</button>
+                        <input type="text">inside of add
+                    </div>
+
+                    <div class="k-contacts">
+                        <p>this place name is contacts</p>
+                    </div>
+
+                    <div class="k-numbers" style="display: none;">
+                        <div class="k-numbers-inside">
+                            <form class="k-numpad" name="nump">
+                                <input id="numpadValue" class="kvalue" type="text" name="txt" readonly='' placeholder="000-000">
+                                <span class="num" onclick="document.nump.txt.value  +='7'">7</span>
+                                <span class="num" onclick="document.nump.txt.value  +='8'">8</span>
+                                <span class="num" onclick="document.nump.txt.value  +='9'">9</span>
+                                <span class="num" onclick="document.nump.txt.value  +='4'">4</span>
+                                <span class="num" onclick="document.nump.txt.value  +='5'">5</span>
+                                <span class="num" onclick="document.nump.txt.value  +='6'">6</span>
+                                <span class="num" onclick="document.nump.txt.value  +='1'">1</span>
+                                <span class="num" onclick="document.nump.txt.value  +='2'">2</span>
+                                <span class="num" onclick="document.nump.txt.value  +='3'">3</span>
+                                <span class="num" onclick="document.nump.txt.value  +='-'">-</span>
+                                <span class="num" onclick="document.nump.txt.value  +='0'">0</span>
+                                <span class="num" onclick="document.nump.txt.value  =''">C</span>
+                                <span class="call-with-numpad"><i class="material-icons">phone</i></span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="kisiler-footer">
+                    <div class="kisiler-bottom-buttons">
+                        <div class="k-footer-left k-footer-app"><i class="material-icons">contacts</i></div>
+                        <div class="k-footer-right k-footer-app"><i class="material-icons">phone</i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-duty">
+        </div>
+
+
+        <div class="app-pcell">
+            <div class="pcell-giris-ekrani">
+                <img class="pcell-loading-logo" width="40%" height="20%" src="./assets/img/phone-apps/palmstore.png">
+            </div>
+            <div class="pcell-paket-onaylama">
+                <div class="paket-onay-text">Paket değişikliğini onaylıyor musunuz? </div>
+                <div class="paket-onay-seviye"></div>
+                <div class="paket-onay-ucret"></div>
+                <button class="paket-geri-button">Geri</button>
+                <button class="paket-onay-button">Onayla</button>
+
+            </div>
+
+            <div class="inside-of-pcell">
+                <div class="pcell-infos">
+                    <div class="pcell-name"> </div>
+                    <div class="pcell-numara"> </div>
+                    <div class="pcell-paket"></div>
+                    <div class="pcell-fatura"> </div>
+                </div>
+                <div class="pcell-paketler">
+                    <div class="pcell-paket-1">
+                        <button id="pcell-paket1-al" class="pcell-paket-satin-al">$</button>
+                        <div class="pcell-paket-name">
+                            Paket : 1
+                        </div>
+                        <div class="pcell-paket-icerik">
+                            100mbps İndirme
+                        </div>
+                        <div class="pcell-paket-ucret">
+                            100$
+                        </div>
+                    </div>
+                    <div style="top:15px;" class="pcell-paket-1">
+                        <button id="pcell-paket2-al" class="pcell-paket-satin-al">$</button>
+                        <div class="pcell-paket-name">
+                            Paket : 2
+                        </div>
+                        <div class="pcell-paket-icerik">
+                            200mbps İndirme
+                        </div>
+                        <div class="pcell-paket-ucret">
+                            200$
+                        </div>
+                    </div>
+                    <div style="top:22px;" class="pcell-paket-1">
+                        <button id="pcell-paket3-al" class="pcell-paket-satin-al">$</button>
+                        <div class="pcell-paket-name">
+                            Paket : 3
+                        </div>
+                        <div class="pcell-paket-icerik">
+                            300mbps İndirme
+                        </div>
+                        <div class="pcell-paket-ucret">
+                            300$
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="app-store">
+            <!-- <div class="store-test"> -->
+
+             <div class="uygulama-1">
+                <img class="uygulama-resimi" src="./assets/img/phone-apps/bank.png">
+                <div class="uygulama-adi">Banka </div>
+                <div class="uygulama-boyutu">190MB </div>
+                <button class="uygulama-indir">Yükle</button>
+            </div>
+            <div class="uygulama-2">
+                <img class="uygulama-resimi" src="./assets/img/phone-apps/calculator.png">
+                <div class="uygulama-adi">Hesap </div>
+                <div class="uygulama-boyutu">50MB </div>
+                <button class="uygulama-indir">Yükle</button>
+            </div>
+            <div class="uygulama-3">
+                <img class="uygulama-resimi" src="./assets/img/phone-apps/duty.png">
+                <div class="uygulama-adi">Görev </div>
+                <div class="uygulama-boyutu">70MB </div>
+                <button class="uygulama-indir">Yükle</button>
+            </div> 
+             <div class="uygulama-4">
+                <img class="uygulama-resimi" src="./assets/img/phone-apps/twitter.png">
+                <div class="uygulama-adi">Twitter </div>
+                <div class="uygulama-boyutu">370MB </div>
+                <button style="border: 2px solid rgb(173, 13, 13); color: rgb(173, 13, 13);" class="uygulama-indir">Kaldır</button>
+            </div>
+            <div class="uygulama-5">
+                <img class="uygulama-resimi" src="./assets/img/phone-apps/clock.png">
+                <div class="uygulama-adi">Saat </div>
+                <div class="uygulama-boyutu">30MB </div>
+                <button class="uygulama-indir">Yükle</button>
+            </div>
+            <div class="uygulama-6">
+                <img class="uygulama-resimi" src="./assets/img/phone-apps/comment.png">
+                <div class="uygulama-adi">Mesajlar </div>
+                <div class="uygulama-boyutu">90MB </div>
+                <button class="uygulama-indir">Yükle</button>
+            </div> 
+            <!-- </div> -->
+        </div>
+
+        <div class="app-settings">
+            <div class="ayarlar-resim-upload">
+                <input class="ayarlar-resim-yukleme" type="text" placeholder="Resim url giriniz.">
+                <button class="ayarlar-resim-yukleme-button">Yükle</button>
+            </div>
+
+            <div class="ayarlar-giris-ekrani">
+                <img class="ayarlar-loading-logo" width="10%" height="5%" src="./assets/img/phone-apps/settings.png">
+            </div>
+            <div class="inside-of-settings">
+
+                <div class="ayarlar-info">
+                    <img id="settings-photo" class="ayarlar-info-foto" src=""> </img>
+                    <div class="settings-photo-edit">
+                        <i id="editid" class="material-icons">edit</i>
+                    </div>
+                    <div class="ayarlar-info-isim"> </div>
+                    <div class="ayarlar-info-numara"></div>
+                    <div class="ayarlar-info-depolama">Depolama : 10/64GB</div>
+                    <div class="ayarlar-info-palmcell-pack"></div>
+                    <div class="ayarlar-info-surum">Yazılım Sürümü : v0.0.3</div>
+
+                </div>
+
+
+                <select name="bgs" id="bgs">
+                    <option disabled hidden selected>Duvar Kağıdı Seç</option>
+                    <option value="./assets/img/background/bg.jpg">1</option>
+                    <option value="./assets/img/background/bg2.jpg">2</option>
+                    <option value="./assets/img/background/bg3.png">3</option>
+                    <option value="./assets/img/background/forest.jpg">4</option>
+                </select>
+
+
+                <button id="setbg">Duvar Kağıdı Kaydet</button>
+            </div>
+        </div>
+
+        <div class="app-yemek">
+            <div class="inside-of-yemek">
+                <div class="this-is-header">
+                    <div id="yemek-musteri-button" class="yemek-header-top aktifheralde">Müşteri</div>
+                    <div id="yemek-calisan-button" class="yemek-header-top ">Çalışan </div>
+
+
+
+                </div>
+                <div id="musteri-panel-id" class="musteri-panel">Musteri Paneli
+                    <input id="yemek-girilen-adres" placeholder="Adres Bilginizi Giriniz" value="">
+                    <input id="yemek-girilen-siparis" placeholder="Siparis Bilginizi Giriniz" value="">
+                    <button id="yemek-adres-gonder-button-id">Siparişi Gonder</button>
+                </div>
+                <div id="calisan-panel-id" class="calisan-panel">Çalışan Paneli</div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div id="app-bank" class="app-bank">
+
+            <div class="banka-giris-ekrani">
+                <img class="bank-loading-logo" width="90%" height="40%" src="./assets/img/phone-apps/bank-logo.png">
+            </div>
+
+
+            <div class="inside-of-bank">
+                <div class="this-is-header">
+                    <div id="bank-account-button" class="bank-header-top aktifheralde">HESAP</div>
+                    <div id="bank-transfer-button" class="bank-header-top ">TRANSFER</div>
+                    <div id="bank-billings-button" class="bank-header-top ">FATURA</div>
+                </div>
+                <div class="inside-of-bankss">
+                    <div id="bank-account" class="inside-of-account">
+                        <span class="bank-account-name"></span>
+                        <span class="account-id"></span>
+                        <span class="account-money"></span>
+
+                        <!-- <span class="account-money">&nbsp; </span> -->
+
+                    </div>
+                    <div style="display: none;" id="bank-transfer" class="inside-of-transfer">
+                        <div class="transfer-top">
+                            <!-- <form id="transfer1" style="background-color: transparent;">
+                            <div class="input-cont" style="background-color: transparent;">
+                                <label style="background-color: transparent;">Para Miktarı</label>
+                                <input style="background-color: transparent;" placeholder="$0" id="amountt" type="number">
+                            </div>
+                            <div style="background-color: transparent;" class="input-cont">
+                                <label style="background-color: transparent;">Gönderilecek İban</label>
+                                <input style="background-color: transparent;" id="currentPlayerr" placeholder="" type="number">
+                            </div>
+                            <button id="yolla">
+                                YOLLA MORUK
+                            </button>
+                        </form> -->
+                            <div class="registration-form">
+                                <header>
+                                    <h1>Transfer</h1>
+                                    <p>Transfer Ekranına Hoş Geldiniz</p>
+                                </header>
+                                <form>
+                                    <div class="input-section email-section"><input id="bankMoneyValue" class="email" type="number" placeholder="Para Miktari" autocomplete="off" value="" />
+                                        <div class="animated-button"><span class="icon-paper-plane"><i
+                                                    class=""></i></span><span class="next-button email"><i
+                                                    class="fa fa-arrow-up"></i></span></div>
+                                    </div>
+                                    <div class="input-section password-section folded"><input id="password" class="password" type="number" placeholder="Gonderilecek Hesap" />
+                                        <div class="animated-button"><span class="icon-lock"><i
+                                                    class=""></i></span><span class="next-button password"><i
+                                                    class="fa fa-arrow-up"></i></span></div>
+                                    </div>
+                                    <div class="input-section repeat-password-section folded"><span>Kesilecek <br>
+                                            Miktar:
+                                        </span>
+                                        <span id="kesilecek-para"></span>
+                                        <div id="bankOnaylamaFooter" class="onaylama-footer">
+                                            <div id="yolla" class="next-button onaylama">✓</div>
+                                            <div class="back-button">X</div>
+                                        </div>
+                                    </div>
+                                    <div class="success">
+                                        <p>İşlem tamamlandı</p>
+                                        <i id="transfer-next" class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="bank-history">
+                            <!-- <div class="inside-history">
+                                <div class="history-baslik">Transfer Gecmisi</div>
+                                <div class="history-main">
+                                    <div class="history-text">
+                                        <div class="history-message">
+                                            <p class="history-send-who">Gonderilen Kisi :
+                                                <p id="historyWho">Yavuz</p>
+                                            </p>
+                                        </div>
+                                        <div class="history-message">
+                                            <p class="history-send-value">Miktar :
+                                                <p id="historyValue">10000</p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="history-text">
+                                        <div class="history-message">
+                                            <p class="history-send-who">Gonderilen Kisi :
+                                                <p id="historyWho">Yavuz</p>
+                                            </p>
+                                        </div>
+                                        <div class="history-message">
+                                            <p class="history-send-value">Miktar :
+                                                <p id="historyValue">10000</p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="history-text">
+                                        <div class="history-message">
+                                            <p class="history-send-who">Gonderilen Kisi :
+                                                <p id="historyWho">Yavuz</p>
+                                            </p>
+                                        </div>
+                                        <div class="history-message">
+                                            <p class="history-send-value">Miktar :
+                                                <p id="historyValue">10000</p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div id="bank-billings" class="inside-of-billings">
+                        <div id="fatura-mekan">
+                            <!-- <div class="fatura-kutu" id="fatura-385">
+                                <div class="fatura-aciklama">Deneme Faturası </div>
+                                <div class="fatura-fiyati">100$ </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="app-telsiz" class="app-telsiz">
+            <div class="inside-of-telsiz">
+                <div class="this-is-telsiz-header">
+                    <div id="telsiz-channel-page-button" class="siktiminustkismi aktifmisin">FREKANSA GIR</div>
+                    <div id="telsiz-leave-page-button" class="siktiminustkismi ">TELSIZ KAPAT</div>
+                </div>
+                <div class="inside-of-yarrak">
+                    <div class="inside-of-transfer">
+                        <form id="frekans1">
+                            <div class="input-cont">
+                                <label>Hangi kanala gireceksin ?</label>
+                                <input placeholder="$0" id="telsizfrekans" type="number">
+                            </div>
+                            <button id="telsizgir">
+                                Telsiz
+                            </button>
+                        </form>
+                    </div>
+                    <div class="radio-leave">
+
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div id="app-telsiz" class="app-telsiz">
+            <div class="inside-of-telsiz">
+                <div class="this-is-header">
+                    <!-- <div id="telsiz-account-button" class="telsiz-header-top aktifheralde">MENU</div> -->
+                    <div id="telsiz-transfer-button" class="telsiz-header-top ">GIR</div>
+                    <div id="telsiz-billings-button" class="telsiz-header-top ">CIK</div>
+                </div>
+                <div class="inside-of-telsizss">
+                    <!-- <div id="telsiz-account" class="inside-of-account">
+                        <div id="telsiz-account-name"></div>
+                        <div id="account-money"></div>
+                        <div id="account-id">99</div>
+                    </div> -->
+                    <div id="telsiz-transfer" class="inside-of-transfer">
+                        <form id="transfer1" style="background-color: transparent;">
+                            <div class="input-cont" style="background-color: transparent;">
+                                <label style="background-color: transparent;">Frekans</label>
+                                <input style="background-color: transparent;" placeholder="0.0mhz" id="telsizfrekans" type="number">
+                            </div>
+
+                            <button id="telsizgir">
+                                Gir
+                            </button>
+                        </form>
+                    </div>
+                    <div id="telsiz-billings" class="inside-of-billings">
+                        <div>TELSIZ FREKANSINDAN CIK</div>
+                        <form id="telsiz1" style="background-color: transparent;">
+                            <button id="telsizterket">
+                                Çık
+                            </button>
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-hesap">
+            <!-- <div class="hesap-ekrani-ust">
+
+            </div> -->
+            <div class="hesap-ekrani-alt">
+
+                <form name="calculator">
+
+                    <input class="hesap-degeri" id="display" type="text" name="display" placeholder="0" readonly></input>
+
+                    <input style="margin-top: 50px; margin-left: 22px;" class="hesap-button" type="button" value="7" onclick="calculator.display.value += '7'">
+                    <input class="hesap-button" type="button" value="8" onclick="calculator.display.value += '8'">
+                    <input class="hesap-button" type="button" value="9" onclick="calculator.display.value += '9'">
+                    <input style="background-color: #ff9e0b;" class="hesap-button" type="button" value="+" onclick="calculator.display.value += ' + '">
+                    <br>
+                    <input style="margin-left: 22px;" class="hesap-button" type="button" value="4" onclick="calculator.display.value += '4'">
+                    <input class="hesap-button" type="button" value="5" onclick="calculator.display.value += '5'">
+                    <input class="hesap-button" type="button" value="6" onclick="calculator.display.value += '6'">
+                    <input style="background-color: #ff9e0b;" class="hesap-button" type="button" value="-" onclick="calculator.display.value += ' - '">
+                    <br>
+                    <input style="margin-left: 22px;" class="hesap-button" type="button" value="1" onclick="calculator.display.value += '1'">
+                    <input class="hesap-button" type="button" value="2" onclick="calculator.display.value += '2'">
+                    <input class="hesap-button" type="button" value="3" onclick="calculator.display.value += '3'">
+                    <input style="background-color: #ff9e0b;" class="hesap-button" type="button" value="x" onclick="calculator.display.value += ' * '">
+                    <br>
+                    <input style="margin-left: 22px; background-color: #a5a5a6;" id="clearButton" class="hesap-button" type="button" value="C" onclick="calculator.display.value = ''">
+                    <input class="hesap-button" type="button" value="0" onclick="calculator.display.value += '0'">
+                    <input class="hesap-button" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
+                    <input style="background-color: #ff9e0b;" class="hesap-button" type="button" value="÷" onclick="calculator.display.value += ' / '">
+                </form>
+
+                <!-- </div> -->
+
+
+
+            </div>
+        </div>
+
+
+
+        <!-- telefon  -->
+
+
+
+
+
+        <div class="phone-header">
+            <div class="phone-header-content">
+                <div class="current-time"><span></span></div>
+                <div class="provider"><i class="fas fa-signal"></i> PalmCell</div>
+                <!-- <div class="battery"><i class="fas fa-battery-three-quarters"></i></div> -->
+            </div>
+        </div>
+        <div id="phone-open-bar">
+            <div class="top-bar">
+                <div class="slider-container">
+                    <input id="contrast" type="range" max="0.5" min="0" step="0.01" />
+                </div>
+            </div>
+        </div>
+
+        <div class="phone-footer">
+            <i class="fas fa-chevron-left" id="phone-back"></i>
+            <i class="far fa-square" id="phone-close"></i>
+            <!-- <i class="far fa-circle" id="phone-home"></i> -->
+
+        </div>
+
+        <!-- <div class="phone-notification">
+            <div class="phone-notification-header">
+                <i class="material-icons">info</i><span id="phone-notification-titel"></span>
+            </div>
+
+            <div class="phone-notification-content">
+                <span id="phone-notification-content"></span>
+            </div>
+
+            <div class="phone-notification-close">
+                <i class="material-icons" id="phone-notification-close">close</i>
+            </div>
+        </div> -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/settings.js"></script>
+    <script src="./assets/js/yemek.js"></script>
+    <script src="./assets/js/bank.js"></script>
+    <script src="./assets/js/hesap.js"></script>
+    <script src="./assets/js/topbar.js"></script>
+    <script src="./assets/js/pcell.js"></script>
+    <script src="./assets/js/scrollbar.js"></script>
+    <script src="./assets/js/lockscreen.js"></script>
+    <script src="./assets/js/contact.js"></script>
+</body>
+
+</html>

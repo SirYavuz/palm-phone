@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.phone {
+    position: absolute;
+    /* display: none; */
+    right: 75px;
+    bottom: 75px;
+}
+
+.phone-frame {
+    position: absolute;
+    height: 630px;
+    width: 300px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.phone-screen {
+    position: relative;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 10px;
+    left: 8px;
+    bottom: 0;
+    background-image: url(../img/background/bg3.png);
+    background-size: cover;
+}
+
+.phone-app-top-time {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,10%);
+}
+
+.phone-app-top-time div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.phone-app-top-time div span:nth-child(1){
+    font-size: 30px;
+}
+
+.phone-top-apps {
+    position: relative;
+    top: 160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.phone-top-apps div {
+    margin-top: 25px !important;
+}
+
+.phone-top-apps div span {
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    top: 52px;
+}
+
+.phone-bottom-apps {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.794);
+    bottom: 45px;
+    z-index: 0;
+}
+
+.phone-bottom-apps .app {
+    margin: 6px;
+}
+
+.phone-header {
+    position: absolute;
+    background-color: transparent;
+    height: 22px;
+    width: 282px;
+    left: 8px;
+    top: 15px;
+    color: rgba(255,255,255,1);
+    z-index: 5;
+}
+
+.phone-buttons {
+    display: flex;
+    position: relative;
+    bottom: 50px;
+    left: 70px;
+    width: 65%;
+    justify-content: space-around;
+    color: #fff;
+    z-index: 2;
+    pointer-events: stroke;
+}
+
+.phone-footer {
+    position: relative;
+    bottom: 35px;
+    height: 35px;
+    left: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.794);
+    color: rgba(255,255,255,1);
+}
+
+.phone-footer i{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 7px;
+}
+
+.phone-footer i:hover{
+    background-color: #363636;
+}   
+
+.provider {
+    padding-top: 7px;
+    font-size: 12px;
+    margin-right: 17px;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.battery {
+    padding-top: 8px;
+    margin-right: 10px;
+    font-size: 9px;
+    float: right;
+}
+
+.current-time {
+    padding-top: 6px;
+    float: left;
+    margin-left: 12px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.phone-header-content {
+    font-size: 11px;
+}
+
+/* Phone Apps */
+
+.app {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-left: 16.5px;
+    margin-top: 16.5px;
+    text-align: center;
+    background-position: center;
+    background-size: 35px;
+    background-repeat: no-repeat;
+    transition: .6s ease all;
+}
+
+.app img {
+    margin-top: 3px;
+    height: 40px;
+    width: 40px;
+}
+
+.app span {
+    font-weight: 600;
+    color: #363636;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app:hover {
+    box-shadow: -5px 6px 5px 3px rgba(0,0,0,0.3);
+}
+
+#empty {
+    background-color: rgba(73, 73, 73, 0.5);
+}
+
+/* Information App */
+
+.app-information {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: rgb(231, 231, 231);
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Contacts App */
+
+.app-contacts {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: rgb(31, 30, 30);
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.app-contacts-header {
+    position: relative;
+    width: 282px;
+    height: 30px;
+    top: 37px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    background-color: #16181b;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}
+
+.app-contacts-header > p {
+    padding-top: 8px;
+}
+
+#app-contacts-search-bar {
+    position: relative;
+    width: 100.5%;
+    height: 30px;
+    top: -20px;
+    left: -1px;
+    background-color: #222222;
+    color: white;
+}
+
+.app-contacts-add-contact {
+    position: relative;
+    font-size: 16px;
+    top: 467px;
+    left: 232px;
+    width: 42px;
+    height: 42px;
+    background-color: #0a5dda;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+}
+
+.app-contacts-add-contact > i {
+    margin-top: 13px;
+}
+
+.player-contacts {
+    position: relative;
+    overflow-y: scroll;
+}
+
+.contact {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    height: 32px;
+    padding-top: 6px;
+    padding-left: 35px;
+    border-bottom: 1px solid #141414;
+    background-color: #dfdfdf;
+}
+
+#contact-call {
+    margin-top: -1px;
+    padding-right: 3px;
+    color: rgb(77, 77, 77);
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+    transition: 0.2s;
+}
+
+#contact-call:hover {
+    color: rgb(9, 46, 114);
+    transition: 0.2s;
+}
+
+#contact-sms {
+    margin-top: -1px;
+    padding-right: 8px;
+    color: rgb(77, 77, 77);
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+    transition: 0.2s;
+}
+
+#contact-sms:hover {
+    color: rgb(9, 46, 114);
+    transition: 0.2s;
+}
+
+#contact-edit {
+    margin-top: -1px;
+    padding-right: 9px;
+    color: rgb(77, 77, 77);
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+    transition: 0.2s;
+}
+
+#contact-edit:hover {
+    color: rgb(9, 46, 114);
+    transition: 0.2s;
+}
+
+.first-letter {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    bottom: 2px;
+    left: 3px;
+    border-radius: 50%;
+    color: #dfdfdf;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#name {
+    padding-top: 5px;
+    color: rgb(26, 26, 26);
+    font-size: 10px;
+    float: left;
+}
+
+.player-contacts::-webkit-scrollbar
+{
+	display: none;
+}
+
+/* Bank App */
+
+.app-bank {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: rgb(231, 231, 231);
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.app-bank-header {
+    position: relative;
+    top: 37px;
+    width: 100%;
+    height: 10%;
+    background-color: rgb(175, 175, 175);
+}
+
+.header-item {
+    width: 25%;
+    height: 100%;
+    background-color: rgb(175, 175, 175);
+    float: left;
+}
+
+.header-item > i {
+    margin-left: 30%;
+    margin-top: 9px;
+    font-size: 26px;
+    color: white;
+}
+
+.header-item > p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 9px;
+    color: white;
+    font-weight: lighter;
+}
+
+.selected {
+    background-color: rgb(9, 67, 133);
+}
+
+.account {
+    position: relative;
+    top: 42px;
+    left: 5px;
+    width: 96%;
+    height: 55px;
+    margin-bottom: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.account > span {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 60px;
+}
+
+#account-icon {
+    position: relative;
+    font-size: 34px;
+    color: rgb(128, 128, 128);
+    bottom: 35px;
+    left: 8px;
+}
+
+#bank-name {
+    top: 7px;
+    position: relative;
+    color: rgb(22, 32, 44);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#bank-type {
+    position: relative;
+    top: 4px;
+    color: rgb(22, 32, 44);
+    font-size: 10px;
+}
+
+#bank-banknumber {
+    position: relative;
+    top: 2px;
+    color: rgb(22, 32, 44);
+    font-size: 10px;
+}
+
+#bank-balance {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    float: right;
+}
+
+.app-bank-total-balance {
+    position: relative;
+    top: 42px;
+    width: 100%;
+    height: 45px;
+    background-color: rgb(42, 42, 42);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+
+.app-bank-total-balance > i {
+    position: relative;
+    color: white;
+    font-size: 24px;
+    margin-left: 80px;
+    bottom: 2px;
+}
+
+#total-accounts-balance {
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    right: 14px;
+    bottom: 17px;
+}
+
+.app-bank-total-balance > p {
+    position: relative;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: white;
+    font-size: 12px;
+    margin-left: 10px;
+    top: 16px;
+}
+
+.app-bank-transfer {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: rgb(231, 231, 231);
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.app-bank-footer {
+    position: absolute;
+    width: 84.3%;
+    left: 23px;
+    height: 10%;
+    bottom: 50px;
+    right: 1px;
+}
+
+.bank-transfer > p {
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.bank-transfer {
+    position: relative;
+    top: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height: 60%;
+    background-color: rgb(45, 74, 110);
+    transition: 0.1s;
+}
+
+.bank-transfer:hover {
+    background-color: rgb(39, 78, 126);
+    transition: 0.1s;
+}
+
+table,
+td {
+  border: 1px solid #333;
+  padding: 3px;
+  border-collapse: collapse;
+}
+
+.phone-notification-close {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    transition: 0.2s;
+}
+
+.phone-notification-close:hover {
+    color: rgb(9, 46, 114);
+    transition: 0.2s;
+}
+
+#phone-notification-titel {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 8px;
+    color: rgb(35, 35, 35);
+    left: 31px;
+}
+
+.phone-notification-header > i {
+    position: absolute;
+    top: 5px;
+    color: rgb(35, 35, 35);
+    left: 5px;
+}
+
+#phone-notification-content {
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    bottom: 8px;
+    color: rgb(35, 35, 35);
+    font-size: 12px;
+    left: 5px;
+}
+
+.add-contact-page {
+    display: none;
+    position: relative;
+    top: 110px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 180px;
+    background-color: rgb(238, 238, 238);
+    box-shadow: 1px 1px 11px 1px rgba(0, 0, 0, 0.554);
+}
+
+.input-field input[type=text]::placeholder {
+    position: relative;
+    font-size: 12px;
+}
+
+.input-field input[type=text] {
+    font-size: 12px;
+}
+
+.input-field input[type=tel]::placeholder {
+    position: relative;
+    font-size: 12px;
+}
+
+.input-field input[type=tel] {
+    font-size: 12px;
+}
+
+.input-field .prefix.active {
+    color: #000;
+}
+
+.input-field {
+    height: 1px;
+}
+
+#telnr-input {
+    margin-top: 30px;
+}
+
+#contact-add-icon {
+    margin-top: 12px;
+}
+
+#contact-add-inputs {
+    position: relative;
+    bottom: 15px;
+    left: 10px;
+}
+
+#contact-save {
+    position: absolute;
+    font-size: 11px;
+    width: 100px;
+    right: 10px;
+    bottom: 10px;
+}
+
+#contact-cancel {
+    position: absolute;
+    font-size: 11px;
+    width: 100px;
+    left: 10px;
+    bottom: 10px;
+}
+
+#contact-save > i {
+    margin-right: 30px;
+}

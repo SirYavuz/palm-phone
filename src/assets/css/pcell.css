@@ -1,0 +1,201 @@
+.app-pcell {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: rgb(223, 167, 63);
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.inside-of-pcell {
+    position: relative;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    height: 445px;
+    background-color: #fff;
+}
+
+.pcell-giris-ekrani {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 570px;
+    border-radius: 20px;
+    bottom: 0;
+    background-color: rgb(223, 167, 63);
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.pcell-loading-logo {
+    margin-left: 31%;
+    margin-top: 70%;
+}
+
+.pcell-infos {
+    position: relative;
+    /* background-color: red; */
+    width: 100%;
+    height: 25%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.pcell-name {
+    /* position: fixed; */
+    width: 60%;
+    /* margin-top: 25px; */
+    padding-top: 15px;
+    /* background-color: aqua; */
+    color: #000;
+    margin-left: 20%;
+    text-align: center;
+}
+
+.pcell-numara {
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.pcell-paket {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.pcell-fatura {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.pcell-paketler {
+    position: relative;
+    background-color: rgb(223, 167, 63);
+    width: 95%;
+    height: 300px;
+    margin-top: 30px;
+    margin-left: 2.5%;
+    border-radius: 20px;
+}
+
+.pcell-paket-1 {
+    user-select: none;
+    position: relative;
+    width: 90%;
+    height: 30%;
+    background-color: #fff;
+    top: 8px;
+    left: 5%;
+    border-radius: 15px;
+    /* border-left: 7px solid rgb(18, 141, 45); */
+}
+
+.pcell-paket-satin-al {
+    position: relative;
+    width: 15px;
+    height: 100%;
+    padding-left: 3px;
+    border: 1px;
+    background-color: rgba(28, 87, 13, 0.808);
+    color: white;
+    font-weight: 500;
+    outline: 0;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.pcell-paket-satin-al:hover {
+    background-color: rgba(45, 138, 22, 0.808);
+    cursor: pointer;
+}
+
+.pcell-paket-name {
+    width: 90px;
+    margin-top: -80px;
+    margin-left: 20px;
+}
+
+.pcell-paket-icerik {
+    padding-top: 8px;
+    width: 190px;
+    margin-left: 20px;
+}
+
+.pcell-paket-ucret {
+    width: 90px;
+    margin-left: 20px;
+    padding-top: 8px;
+}
+
+.pcell-paket-onaylama {
+    display: none;
+    user-select: none;
+    position: absolute;
+    width: 90%;
+    height: 30%;
+    background-color: #fff;
+    margin-top: 60%;
+    margin-left: 5%;
+    border-radius: 20px;
+}
+
+.paket-geri-button {
+    background-color: rgb(211, 207, 207);
+    margin-top: 36px;
+    width: 50%;
+    height: 15%;
+    border-bottom-left-radius: 15px;
+    border: 0;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+}
+
+.paket-onay-button {
+    background-color: rgb(211, 207, 207);
+    position: fixed;
+    width: 127px;
+    margin-top: 36px;
+    height: 26px;
+    border-bottom-right-radius: 15px;
+    border: 0;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+}
+
+.paket-geri-button:hover {
+    background-color: rgb(185, 185, 185);
+}
+
+.paket-onay-button:hover {
+    background-color: rgb(185, 185, 185);
+}
+
+.paket-onay-text {
+    width: 90%;
+    height: 20%;
+    /* background-color: red; */
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.paket-onay-seviye {
+    margin-top: 25px;
+    margin-left: 35px;
+}
+
+.paket-onay-ucret {
+    margin-top: 15px;
+    margin-left: 35px;
+}

@@ -1,0 +1,86 @@
+resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
+
+client_scripts {
+    'client/main.lua',
+    'client/camera.lua',
+    'client/animation.lua',
+    -- 'client/telsiz.lua',
+    'config.lua'
+}
+
+server_scripts {
+    '@mysql-async/lib/MySQL.lua',
+    'server/main.lua',
+    'server/item.lua',
+    'server/server.lua',
+    'config.lua'
+}
+
+ui_page 'src/phone.html'
+
+files {
+    'src/phone.html',
+    'src/appbank.html',
+    'src/contacts.html',
+    'src/assets/css/style.css',
+    'src/assets/css/lockscreen.css',
+    'src/assets/css/scrollbar.css',
+    'src/assets/css/topbar.css',
+    'src/assets/css/reset.css',
+    'src/assets/css/phone-call.css',
+    'src/assets/css/bankcss.css',
+    'src/assets/css/pcell.css',
+    'src/assets/css/contacts.css',
+    'src/assets/css/phone.css',
+    'src/assets/css/store.css',
+    'src/assets/css/duty.css',
+    'src/assets/css/information.css',
+    'src/assets/css/yemek.css',
+    'src/assets/css/settings.css',
+    'src/assets/css/hesap.css',
+    'src/assets/css/telsiz.css',
+    'src/assets/js/main.js',
+    'src/assets/js/bank.js',
+    'src/assets/js/settings.js',
+    'src/assets/js/yemek.js',
+    'src/assets/js/contact.js',
+    'src/assets/js/lockscreen.js',
+    'src/assets/js/pcell.js',
+    'src/assets/js/scrollbar.js',
+    'src/assets/js/hesap.js',
+    'src/assets/js/topbar.js',
+    'src/assets/img/background/bg.jpg',
+    'src/assets/img/background/bg2.jpg',
+    'src/assets/img/background/bg3.png',
+    'src/assets/img/male.png',
+    'src/assets/img/bank/wallet.png',
+    'src/assets/img/bank/bg.png',
+    'src/assets/img/background/forest.jpg',
+    'src/assets/img/border/s8.png',
+    'src/assets/img/phone-apps/bank.png',
+    'src/assets/img/phone-apps/settings.png',
+    'src/assets/img/phone-apps/information.png',
+    'src/assets/img/phone-apps/contacts.png',
+    'src/assets/img/phone-apps/insta.png',
+    'src/assets/img/phone-apps/kamera.png',
+    'src/assets/img/phone-apps/kamera2.png',
+    'src/assets/img/phone-apps/palmstore.png',
+    'src/assets/img/phone-apps/phone.png',
+    'src/assets/img/phone-apps/twitter.png',
+    'src/assets/img/phone-apps/clock.png',
+    'src/assets/img/phone-apps/calculator.png',
+    'src/assets/img/phone-apps/wallet.png',
+    'src/assets/img/phone-apps/yellow.png',
+    'src/assets/img/phone-apps/bank-logo.png',
+    'src/assets/img/phone-apps/comment.png',
+    'src/assets/img/solid/blackbg.jpg',
+    'src/assets/sound/ring.ogg',
+    'src/assets/sound/ring2.ogg',
+    'src/assets/sound/tchatNotification.ogg',
+    'src/assets/sound/Phone_Call_Sound_Effect.ogg',
+    'src/assets/sound/Twitter_Sound_Effect.ogg',
+    'src/assets/sound/closesound.mp3',
+    'src/assets/sound/Yellow_Sound_Effect.ogg',
+    'src/assets/sound/InstagramSound.ogg'
+}
+

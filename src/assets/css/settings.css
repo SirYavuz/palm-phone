@@ -1,0 +1,165 @@
+.app-settings {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: #0d805d;
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.inside-of-settings {
+    position: relative;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    height: 445px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#bgs {
+    margin-top: 95px;
+    display: block;
+    text-align: center;
+    padding-left: 75px;
+    font-weight: 500;
+}
+
+#setbg {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 25px;
+    border-radius: 5px;
+    border: 2px solid #0d805d;
+    color: #0d805d;
+    font-weight: 500;
+}
+
+.ayarlar-giris-ekrani {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 570px;
+    border-radius: 20px;
+    bottom: 0;
+    background-color: #0d805d;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.ayarlar-loading-logo {
+    margin-left: 46%;
+    margin-top: 75%;
+}
+
+.ayarlar-info-foto {
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid #0d805d;
+}
+
+.settings-photo-edit {
+    user-select: none;
+    position: relative;
+    /* background-color: red; */
+    width: 25px;
+    height: 25px;
+    margin-left: 34px;
+    margin-top: 1px;
+    color: #0d805d;
+    padding-left: 2.5px;
+}
+
+#editid {
+    font-size: 18px !important;
+    cursor: pointer;
+}
+
+.ayarlar-info-isim {
+    position: relative;
+    margin-top: -87px;
+    margin-left: 70px;
+    /* background-color: red; */
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.ayarlar-info-numara {
+    position: relative;
+    /* background-color: blue; */
+    width: 100px;
+    text-align: center;
+    margin-left: 120px;
+    margin-top: 0px;
+}
+
+.ayarlar-info-depolama {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #0d805d;
+}
+
+.ayarlar-info-palmcell-pack {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.ayarlar-info-surum {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+.ayarlar-resim-upload {
+    display: none;
+    position: absolute;
+    /* background-color: red; */
+    width: 80%;
+    height: 10%;
+    margin-top: 14%;
+    margin-left: 5%;
+}
+
+.ayarlar-resim-yukleme {
+    background-color: #fff !important;
+    width: 140px !important;
+    height: 55% !important;
+    margin-left: 15px !important;
+    margin-top: 6% !important;
+    border-radius: 15px !important;
+    padding-left: 10px !important;
+    padding-right: 5px !important;
+}
+
+.ayarlar-resim-yukleme-button {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    border-radius: 15px !important;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #0d805d;
+    cursor: pointer;
+}

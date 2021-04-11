@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="appsex">
+        <div class="app-contacts-header">
+            <p>Contacten</p>
+        </div>
+        <div class="app-contacts-add-contact waves-effect" id="add-contact-page-button"><i class="fas fa-plus"></i></div>
+        <div class="player-contacts" id="player-contacts">
+    
+            <div class="contact">
+                <div class="first-letter" style="background-color: rgb(' + contact.color.r + ', ' + contact.color.g + ', ' + contact.color.b + ');">' + (contact.name).charAt(0).toUpperCase() + '</div>
+                <span id="name"><td>Snorlex</td></span>
+                <div id="phone-call-action"><i class="material-icons" id="contact-call">call</i></div>
+                <i class="material-icons" id="contact-sms">textsms</i>
+                <i class="material-icons" id="contact-edit">edit</i>
+                <span id="number">(' + contact.number + ')</span>
+            </div>
+        </div>
+    
+        <div class="add-contact-page">
+            <div class="row" id="contact-add-inputs">
+                <form class="col s10">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix" id="contact-add-icon">account_circle</i>
+                            <input class="add-contact-name" id="icon_prefix" placeholder="Contact naam" type="text" class="validate">
+                        </div>
+                        <div class="input-field col s12" id="telnr-input">
+                            <i class="material-icons prefix" id="contact-add-icon">phone</i>
+                            <input class="add-contact-nr" id="icon_telephone" placeholder="Tel nr." type="tel" class="validate">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <button class="btn waves-effect waves-light blue darken-2" id="contact-save" type="submit" name="action">Opslaan
+                <i class="material-icons right">send</i>
+            </button>
+            <button class="btn waves-effect waves-light blue darken-2" id="contact-cancel" type="submit" name="action">Annuleren
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

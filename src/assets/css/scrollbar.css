@@ -1,0 +1,10 @@
+#setBrgh {
+    height: 590px;
+    width: 100%;
+    top: 20px;
+    left: 8px;
+    position: absolute;
+    z-index: 10;
+    opacity: 0.2;
+    pointer-events: none;
+}

@@ -1,0 +1,292 @@
+/* telsiz App */
+
+.inside-of-telsiz {
+    position: relative;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    height: 445px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.this-is-header {
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.telsiz-header-top {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    border-bottom: 2px solid transparent;
+}
+
+.telsiz-header-top:nth-child(1) {
+    border-top-left-radius: 30px;
+}
+
+.telsiz-header-top:nth-child(3) {
+    border-top-right-radius: 30px;
+}
+
+.telsiz-header-top:hover {
+    background: rgba(0, 0, 0, .1);
+    border-bottom: 3px solid #0f186b;
+}
+
+.telsiz-header-top.aktifheralde {
+    border-bottom: 3px solid #0f186b;
+}
+
+.inside-of-telsizss {
+    width: 100%;
+    height: 100%;
+}
+
+.inside-of-transfer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/bank/transferbg.png);
+}
+
+.inside-of-account {
+    overflow: hidden;
+    width: 264px;
+    height: 445px;
+    background-image: url(../img/bank/bg.png);
+    background-size: cover;
+}
+
+#telsiz-account-name {
+    position: relative;
+    font-size: 28px;
+    top: 18px;
+    left: 90px;
+    text-align: left;
+}
+
+#account-money {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    position: relative;
+    text-align: center;
+    left: 63px;
+    top: 60px;
+}
+
+#account-id {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    position: relative;
+    text-align: center;
+    left: -62px;
+    top: 44px;
+}
+
+#transfer1 {
+    overflow: hidden;
+    position: relative;
+    top: 120px;
+    height: 300px;
+    text-align: center;
+}
+
+#transfer1 input {
+    width: 200px;
+}
+
+#transfer1 input::-webkit-outer-spin-button,
+#transfer1 input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#telsiz1 {
+    overflow: hidden;
+    position: relative;
+    top: 120px;
+    height: 300px;
+    text-align: center;
+}
+
+#telsiz1 input {
+    width: 200px;
+}
+
+#telsiz1 input::-webkit-outer-spin-button,
+#telsiz1 input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.app-telsiz {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: #0f186b;
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* arama App .inside-of-arama {
+    position: relative;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    height: 445px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.this-is-header {
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.arama-header-top {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    border-bottom: 2px solid transparent;
+}
+
+.arama-header-top:nth-child(1) {
+    border-top-left-radius: 30px;
+}
+
+.arama-header-top:nth-child(3) {
+    border-top-right-radius: 30px;
+}
+
+.arama-header-top:hover {
+    background: rgba(0, 0, 0, .1);
+    border-bottom: 3px solid #11a843;
+}
+
+.arama-header-top.aktifheralde {
+    border-bottom: 3px solid #11a843;
+}
+
+.inside-of-aramass {
+    width: 100%;
+    height: 100%;
+}
+
+.inside-of-transfer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/bank/transferbg.png);
+}
+
+.inside-of-account {
+    overflow: hidden;
+    width: 264px;
+    height: 445px;
+    background-image: url(../img/bank/bg.png);
+    background-size: cover;
+}
+
+#arama-account-name {
+    position: relative;
+    font-size: 28px;
+    top: 18px;
+    left: 90px;
+    text-align: left;
+}
+
+#account-money {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    position: relative;
+    text-align: center;
+    left: 63px;
+    top: 60px;
+}
+
+#account-id {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    position: relative;
+    text-align: center;
+    left: -62px;
+    top: 44px;
+}
+
+#transfer1 {
+    overflow: hidden;
+    position: relative;
+    top: 120px;
+    height: 300px;
+    text-align: center;
+}
+
+#transfer1 input {
+    width: 200px;
+}
+
+#transfer1 input::-webkit-outer-spin-button,
+#transfer1 input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#arama1 {
+    overflow: hidden;
+    position: relative;
+    top: 120px;
+    height: 300px;
+    text-align: center;
+}
+
+#arama1 input {
+    width: 200px;
+}
+
+#arama1 input::-webkit-outer-spin-button,
+#arama1 input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.app-arama {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: #11a843;
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+} */

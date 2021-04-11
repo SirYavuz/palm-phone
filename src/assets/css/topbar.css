@@ -1,0 +1,28 @@
+#phone-open-bar {
+    position: relative;
+    height: 0px;
+    max-height: 450px;
+    width: 282px;
+    border-radius: 20px;
+    top: 37px;
+    left: 8px;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7);
+    background-size: cover;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.top-bar {
+    display: none;
+    height: 400px;
+    width: 85%;
+    background: transparent;
+}
+
+.slider {
+    
+}

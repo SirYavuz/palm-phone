@@ -1,0 +1,20 @@
+#howIenter {
+    height: 590px;
+    width: 100%;
+    top: 20px;
+    left: 8px;
+    position: absolute;
+    z-index: 7;
+    /* background-image: url(../img/background/bg3.png); */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#goUpLock {
+    padding: 10px 20px;
+    border-radius: 10%;
+    color: red;
+    background: none;
+}

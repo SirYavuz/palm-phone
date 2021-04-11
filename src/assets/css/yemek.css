@@ -1,0 +1,73 @@
+.app-yemek {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: #ce2323;
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.inside-of-yemek {
+    position: relative;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    height: 445px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#bgs {
+    display: block;
+}
+
+.yemek-header-top {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    border-bottom: 2px solid transparent;
+}
+
+.yemek-header-top:nth-child(1) {
+    border-top-left-radius: 30px;
+}
+
+.yemek-header-top:nth-child(3) {
+    border-top-right-radius: 30px;
+}
+
+.yemek-header-top:hover {
+    background: rgba(0, 0, 0, .1);
+    border-bottom: 3px solid #ce2323;
+}
+
+.yemek-header-top.aktifheralde {
+    border-bottom: 3px solid #ce2323;
+}
+
+.musteri-panel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* background-image: url(../img/bank/transferbg.png); */
+}
+
+.calisan-panel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* background-image: url(../img/bank/transferbg.png); */
+    display: none;
+}

@@ -1,0 +1,148 @@
+.app-store {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: #0e0e0e;
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(102, 168, 255);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 20p;
+}
+
+.store-test {
+    overflow: auto;
+    height: 800px;
+}
+
+.uygulama-1 {
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    margin-top: 55px;
+    margin-left: 5%;
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+    border-radius: 15px;
+    user-select: none;
+}
+
+.uygulama-2 {
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    margin-top: 195px;
+    margin-left: 5%;
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+    border-radius: 15px;
+    user-select: none;
+}
+
+.uygulama-3 {
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    margin-top: 325px;
+    margin-left: 5%;
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+    border-radius: 15px;
+    user-select: none;
+}
+
+.uygulama-4 {
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    margin-top: 455px;
+    margin-left: 5%;
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+    border-radius: 15px;
+    user-select: none;
+}
+
+.uygulama-5 {
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    margin-top: 590px;
+    margin-left: 5%;
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+    border-radius: 15px;
+    user-select: none;
+}
+
+.uygulama-6 {
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    margin-top: 730px;
+    margin-left: 5%;
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+    border-radius: 15px;
+    user-select: none;
+}
+
+.uygulama-resimi {
+    position: relative;
+    margin-left: 22px;
+    margin-top: 10px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.uygulama-adi {
+    position: relative;
+    margin-top: -30px;
+    margin-left: 80px;
+    font-size: 20px;
+}
+
+.uygulama-boyutu {
+    position: relative;
+    margin-top: -15px;
+    margin-left: 175px;
+    font-size: 15px;
+    color: rgb(102, 168, 255);
+    font-weight: 100;
+}
+
+.uygulama-indir {
+    position: relative;
+    width: 205px;
+    height: 35px;
+    border-radius: 88px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(102, 168, 255);
+    background-color: rgb(59, 59, 59);
+    border: 2px solid rgb(102, 168, 255);
+    margin-left: 25px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.uygulama-indir:hover {
+    background-color: #0e0e0e;
+}

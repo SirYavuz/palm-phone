@@ -1,0 +1,79 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.app-hesap {
+    position: relative;
+    display: none;
+    z-index: 0;
+    height: 590px;
+    width: 282px;
+    border-radius: 20px;
+    top: 20px;
+    left: 8px;
+    bottom: 0;
+    background-color: #000;
+    background-size: cover;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.hesap-ekrani-ust {
+    position: absolute;
+    width: 282px;
+    height: 100px;
+    margin-top: 78px;
+    background-color: #000;
+}
+
+.hesap-degeri {
+    color: #fff;
+    text-align: right;
+    background-color: #000;
+    font-size: 24px !important;
+    width: 170px !important;
+    height: 50px !important;
+    margin-left: 75px !important;
+    font-weight: 500 !important;
+    border: 0 !important;
+}
+
+.hesap-ekrani-alt {
+    position: absolute;
+    width: 282px;
+    height: 370px;
+    margin-top: 150px;
+    background-color: #000;
+}
+
+.hesap-tuslari-1 {
+    background-color: #000;
+    width: 90%;
+    margin-left: 5%;
+    height: 330px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 10px;
+}
+
+.hesap-button:hover {
+    background-color: #a5a5a5;
+    cursor: pointer;
+}
+
+.hesap-button {
+    width: 55px;
+    height: 55px;
+    border-radius: 45px;
+    border: 0;
+    margin-left: 2px;
+    margin-top: 7px;
+    background-color: #333333;
+    color: #fff;
+    outline: 0;
+    font-weight: 500;
+}
